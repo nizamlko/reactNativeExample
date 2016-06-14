@@ -10,7 +10,7 @@ import {
   TouchableOpacity,
 } from 'react-native';
 
-class PropertyFinderApp extends Component {
+class HelloWorld extends Component {
   render() {
     return( 
     <Text style={styles.text}>
@@ -20,7 +20,7 @@ class PropertyFinderApp extends Component {
   }
 }
 
-class PropertyFinder extends Component {
+class PropertyFinderApp extends Component {
   render() {
     return (
       <Navigator
@@ -36,7 +36,7 @@ class PropertyFinder extends Component {
   }
   renderScene(route, navigator) {
     return (
-        <PropertyFinderApp
+        <HelloWorld
           navigator={navigator} />
       );
   }
@@ -74,4 +74,4 @@ const styles = StyleSheet.create({
 
 
 
-AppRegistry.registerComponent('PropertyFinder', () => PropertyFinder);
+AppRegistry.registerComponent('PropertyFinder', () => PropertyFinderApp);
