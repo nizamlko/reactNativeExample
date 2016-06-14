@@ -15,7 +15,7 @@ class PropertyFinder extends Component {
           Welcome to React Native!
         </Text>
         <Text style={styles.instructions}>
-          To get started, edit index.android.js
+          To get started, edit index.android.js 222
         </Text>
         <Text style={styles.instructions}>
           Shake or press menu button for dev menu
@@ -26,6 +26,12 @@ class PropertyFinder extends Component {
 }
 
 const styles = StyleSheet.create({
+  text: {
+    color: 'black',
+    backgroundColor: 'white',
+    fontSize: 30,
+    margin: 80
+  },
   container: {
     flex: 1,
     justifyContent: 'center',
