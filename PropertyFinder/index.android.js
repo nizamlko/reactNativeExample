@@ -1,5 +1,5 @@
 'use strict';
-import React, { Component } from 'react';
+import React, { Component, Navigator } from 'react';
 import {
   AppRegistry,
   StyleSheet,
@@ -7,23 +7,17 @@ import {
   View
 } from 'react-native';
 
-class PropertyFinder extends Component {
+class HelloWorld extends Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.android.js 222
-        </Text>
-        <Text style={styles.instructions}>
-          Shake or press menu button for dev menu
-        </Text>
-      </View>
+      <Text style={styles.text}>
+          Hello World (Again2)
+      </Text>
     );
   }
 }
+
+
 
 const styles = StyleSheet.create({
   text: {
@@ -50,4 +44,4 @@ const styles = StyleSheet.create({
   },
 });
 
-AppRegistry.registerComponent('PropertyFinder', () => PropertyFinder);
+AppRegistry.registerComponent('PropertyFinder', () => HelloWorld);
