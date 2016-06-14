@@ -7,6 +7,30 @@ import {
   View
 } from 'react-native';
 
+class PropertyFinderApp extends Component {
+  render() {
+    return (
+      <Navigator
+          initialRoute={{id: 'HelloWorld', name: 'Index'}}
+          renderScene={this.renderScene.bind(this)}
+          configureScene={(route) => {
+            if (route.sceneConfig) {
+              return route.sceneConfig;
+            }
+            return Navigator.SceneConfigs.FloatFromRight;
+          }} />
+    );
+  }
+
+  renderScene(route, navigator) {
+    var routeId = route.id;   
+    return (
+        <HelloWorld
+          navigator={navigator} />
+      );   
+  }
+}
+
 class HelloWorld extends Component {
   render() {
     return (
@@ -44,4 +68,4 @@ const styles = StyleSheet.create({
   },
 });
 
-AppRegistry.registerComponent('PropertyFinder', () => HelloWorld);
+AppRegistry.registerComponent('PropertyFinder', () => PropertyFinderApp);
