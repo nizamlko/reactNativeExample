@@ -12,7 +12,21 @@ import {
 } from 'react-native';
 
 class SearchPage extends Component {
-  render() {
+	constructor(props) {
+		super(props);
+		this.state = {
+			searchString: 'london2',
+			count:1
+		};
+	}
+	onSearchTextChanged(event) {
+		console.log('onSearchTextChanged');
+		this.setState({ searchString: event.nativeEvent.text });
+		console.log(this.state.searchString);
+	}
+	render() {
+	console.log('SearchPage.render');
+	this.state.count++;
     return (
       <View style={styles.container}>
         <Text style={styles.description}>
@@ -24,7 +38,10 @@ class SearchPage extends Component {
 		<View style={styles.flowRight}>
 		  <TextInput
 			style={styles.searchInput}
-			placeholder='Search via name or postcode'/>
+			value={this.state.searchString+this.state.count}	
+			onChange={this.onSearchTextChanged.bind(this)}			
+			placeholder='Search via name or postcode'
+			/>
 		  <TouchableHighlight style={styles.button} underlayColor='#99d9f4'>
 			<Text style={styles.buttonText}>Go</Text>
 		  </TouchableHighlight>
