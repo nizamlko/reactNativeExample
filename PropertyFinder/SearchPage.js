@@ -25,15 +25,14 @@ class SearchPage extends Component {
 		  <TextInput
 			style={styles.searchInput}
 			placeholder='Search via name or postcode'/>
-		  <TouchableHighlight style={styles.button}
-			  underlayColor='#99d9f4'>
+		  <TouchableHighlight style={styles.button} underlayColor='#99d9f4'>
 			<Text style={styles.buttonText}>Go</Text>
 		  </TouchableHighlight>
 		</View>
-		<TouchableHighlight style={styles.button}
-			underlayColor='#99d9f4'>
+		<TouchableHighlight style={styles.button} underlayColor='#99d9f4'>
 		  <Text style={styles.buttonText}>Location</Text>
 		</TouchableHighlight>
+		<Image source={require('./Resources/house.png')} style={styles.image}/>
       </View>
     );
   }
@@ -74,15 +73,19 @@ var styles = StyleSheet.create({
 	  justifyContent: 'center'
 	},
 	searchInput: {
-	  height: 36,
-	  padding: 4,
-	  marginRight: 5,
-	  flex: 4,
-	  fontSize: 18,
-	  borderWidth: 1,
-	  borderColor: '#48BBEC',
-	  borderRadius: 8,
-	  color: '#48BBEC'
+		height: 36,
+		padding: 4,
+		marginRight: 5,
+		flex: 4,
+		fontSize: 18,
+		borderWidth: 1,
+		borderColor: '#48BBEC',
+		borderRadius: 8,
+		color: '#48BBEC'
+	},
+	image: {
+		width: 217,
+		height: 138
 	}
 });
 module.exports = SearchPage;
