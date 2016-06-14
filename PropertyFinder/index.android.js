@@ -10,6 +10,8 @@ import {
   TouchableOpacity,
 } from 'react-native';
 
+var SearchPage = require('./SearchPage');
+
 class HelloWorld extends Component {
   render() {
     return( 
@@ -36,7 +38,7 @@ class PropertyFinderApp extends Component {
   }
   renderScene(route, navigator) {
     return (
-        <HelloWorld
+        <SearchPage
           navigator={navigator} />
       );
   }

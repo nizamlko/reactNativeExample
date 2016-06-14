@@ -39,3 +39,4 @@ var styles = StyleSheet.create({
     alignItems: 'center'
   }
 });
+module.exports = SearchPage;
