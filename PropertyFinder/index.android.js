@@ -1,17 +1,30 @@
 'use strict';
-import React, { Component, Navigator } from 'react';
+
+import React, { Component } from 'react';
 import {
   AppRegistry,
-  StyleSheet,
+  StyleSheet,  
   Text,
-  View
+  View,
+  Navigator,
+  TouchableOpacity,
 } from 'react-native';
 
 class PropertyFinderApp extends Component {
   render() {
+    return( 
+    <Text style={styles.text}>
+      Hello World (Again2)
+    </Text>
+  );
+  }
+}
+
+class PropertyFinder extends Component {
+  render() {
     return (
       <Navigator
-          initialRoute={{id: 'HelloWorld', name: 'Index'}}
+          initialRoute={{id: 'SplashPage', name: 'Index'}}
           renderScene={this.renderScene.bind(this)}
           configureScene={(route) => {
             if (route.sceneConfig) {
@@ -21,26 +34,13 @@ class PropertyFinderApp extends Component {
           }} />
     );
   }
-
   renderScene(route, navigator) {
-    var routeId = route.id;   
     return (
-        <HelloWorld
+        <PropertyFinderApp
           navigator={navigator} />
-      );   
+      );
   }
 }
-
-class HelloWorld extends Component {
-  render() {
-    return (
-      <Text style={styles.text}>
-          Hello World (Again2)
-      </Text>
-    );
-  }
-}
-
 
 
 const styles = StyleSheet.create({
@@ -68,4 +68,10 @@ const styles = StyleSheet.create({
   },
 });
 
-AppRegistry.registerComponent('PropertyFinder', () => PropertyFinderApp);
+
+
+
+
+
+
+AppRegistry.registerComponent('PropertyFinder', () => PropertyFinder);
